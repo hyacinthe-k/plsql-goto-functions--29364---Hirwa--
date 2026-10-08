@@ -20,13 +20,9 @@ C1 02_functions/C1_fn_validate_payroll.sql
 <img width="1431" height="1633" alt="c1" src="https://github.com/user-attachments/assets/f392b3f7-38b6-421b-addf-34f2a8189ad2" />
 
 C2 docs/REFLECTION.md 
+
 In this assignment I learned that a GOTO statement jumps to a label in the same or an enclosing block, but it can never jump into an IF, a loop or an exception handler. Doing so causes the PLS-00375 error I reproduced in A3. Rewriting A1 and A2 without GOTO (A4) showed me that IF/ELSIF, CASE and CONTINUE give the same result with code that is shorter and much easier to read, so GOTO should be used rarely. In Part B, I learned that functions must return a value, can be called directly inside SELECT, WHERE and ORDER BY statements, and need exception handling for bad input such as NULL values, negative salaries and missing departments. Combining the small functions into the payroll validator in C1 showed me how reusable, well-tested functions make larger programs simpler. The hardest part was getting label scope right and deciding how to handle invalid data, and next time I would store the tax brackets in a table instead of hard-coding them.
 
-## How to Run (Oracle SQL Developer)
-1. Run `00_setup/create_tables.sql` (F5 = Run Script).
-2. Run the functions in `02_functions/` in order B1, B2, B3, B4, C1.
-3. Run the programs in `01_goto/` (A1 and A4 prompt for a number).
-4. Run the tests in `03_tests/`.
-5. Take screenshots into `screenshots/`.
+
 
 
